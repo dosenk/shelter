@@ -1,11 +1,14 @@
 const path = require('path')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
+const isDev = process.env.NODE_ENV === 'development'
 
 module.exports = {
     mode: 'development',
     entry: {
-        main: './pages/main/main.js',
+        main: './src/pages/main/main.js',
     },
     output: {
         filename: '[name].[contenthash].js',
@@ -14,10 +17,37 @@ module.exports = {
     devServer: {
         port: 4200
     },
+    devtool: isDev ? 'source-map' : '',
     plugins: [
         new HTMLWebpackPlugin({
-            template: './pages/index.html'
+            template: './src/pages/main/main.html'
         }),
-        new CleanWebpackPlugin()
-    ]
+        new CleanWebpackPlugin(),
+        new MiniCssExtractPlugin({
+            filename: '[name].[contenthash].css'
+        })
+    ],
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: [MiniCssExtractPlugin.loader,'css-loader']
+            },
+            {
+                test: /\.s[ca]ss$/,
+                use: [
+                    {
+                       loader: MiniCssExtractPlugin.loader, 
+                       options: {},
+                    },
+                    'css-loader',
+                    'sass-loader'
+                    ]
+            },
+            {
+                test: /\.(png|jpg|jpeg|svg|gif)$/,
+                use: ['file-loader']
+            }
+        ]
+    }
 }

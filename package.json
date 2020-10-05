@@ -5,10 +5,10 @@
   "private": "true",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx webpack --mode development",
-    "build": "npx webpack --mode production",
-    "watch": "npx webpack --mode development --watch",
-    "start": "npx webpack-dev-server --mode development --open"
+    "dev": "npx cross-env NODE_ENV=development webpack --mode development",
+    "build": "npx cross-env NODE_ENV=prodaction webpack --mode production",
+    "watch": "npx cross-env NODE_ENV=development webpack --mode development --watch",
+    "start": "npx cross-env NODE_ENV=development webpack-dev-server --mode development"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,14 @@
   "homepage": "https://github.com/dosenk/shelter#readme",
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^4.3.0",
+    "file-loader": "^6.1.0",
     "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^0.11.3",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.0.2",
+    "style-loader": "^1.3.0",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
