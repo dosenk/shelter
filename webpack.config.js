@@ -8,7 +8,7 @@ const isDev = process.env.NODE_ENV === 'development'
 module.exports = {
     mode: 'development',
     entry: {
-        main: './src/pages/main/main.js',
+        main: './src/pages/index.js',
     },
     output: {
         filename: '[name].[contenthash].js',
