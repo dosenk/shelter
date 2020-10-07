@@ -1,38 +1,111 @@
 .help {
-    @include blockSizes(100%, 611px);
-    .help_wrapper {
-        p {
-            margin: 0;
-        }
-        @include blockSizes(1200px/1280px*100%, 431px/611px*100%);
-        margin: 0 auto;
-        margin-top: 80px / 1280px * 100%;
+  @include blockSizes(100%, 611px);
+  .help_wrapper {
+    p {
+      margin: 0;
+    }
+    @include blockSizes(1200px/1280px * 100%, 431px/611px * 100%);
+    margin: 0 auto;
+    margin-top: 80px / 1280px * 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .help_wrapper__tittle {
+      @include fontStyle($ffl-G, normal, 400, 35px, 130%, 0.06em, #545454);
+      text-align: center;
+      margin-left: 2px;
+      margin-top: 1px;
+    }
+    .help_wrapper__content {
+      @include blockSizes(1146px/1200px * 100%, 281px/431px * 100%);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: space-between;
+      .help_content__item {
+        @include blockSizes(auto, 113px);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
         align-items: center;
-        .help_wrapper__tittle {
-            @include fontStyle($ffl-G, normal, 400, 35px, 130%, 0.06em, #545454);
-            text-align: center;
+        margin-left: 60px / 1146px * 100%;
+        margin-right: 60px / 1146px * 100%;
+        .help_content__text {
+          @include fontStyle($ffl-G, normal, 400, 20px, 23px, 0.06em, #545454);
+          text-overflow: hidden;
+          white-space: nowrap;
+          text-align: center;
         }
-        .help_wrapper__content {
-            @include blockSizes(1026px/1200px*100%, 281px/431px*100%);
-            @include fontStyle($ffl-G, normal, 400, 20px, 115%, 0.06em, #545454);
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            .help_content__item {
-                @include blockSizes(auto, 113px);
-                // text-align: end;
-                margin-right: 120px;
-            }
-            @each $img in 1, 2, 3, 4, 5, 6, 7, 8, 9 {
-                .help_img_#{$img} {
-                  background: url('../assets/img_#{$img}.svg') no-repeat;
-                }
-            } 
-            
+      }
+      .help_img_1 {
+        & > p {
+          width: 82px;
         }
+      }
+      .help_img_2 {
+        & > p {
+          width: 150px;
+        }
+        & > img {
+          margin-right: 2px;
+        }
+      }
+      .help_img_3 {
+        & > p {
+          width: 60px;
+        }
+      }
+      .help_img_4 {
+        & > p {
+          width: 153px;
+        }
+        & > img {
+          margin-top: 2px;
+          margin-left: 2px;
+        }
+      }
+      .help_img_5 {
+        & > p {
+          width: 101px;
+        }
+        & > img {
+          margin-right: 2px;
+          margin-left: 2px;
+        }
+      }
+      .help_img_6 {
+        & > p {
+          width: 89px;
+        }
+        & > img {
+          margin-top: 3px;
+          margin-right: 2px;
+        }
+      }
+      .help_img_7 {
+        & > p {
+          width: 101px;
+        }
+      }
+      .help_img_8 {
+        & > p {
+          width: 165px;
+        }
+        & > img {
+          margin-top: 4px;
+          margin-left: 2px;
+        }
+      }
+      .help_img_9 {
+        & > p {
+          width: 143px;
+        }
+        & > img {
+          margin-left: 3px;
+        }
+      }
     }
-    
+  }
 }

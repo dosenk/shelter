@@ -45,8 +45,16 @@ module.exports = {
                     ]
             },
             {
-                test: /\.(png|jpg|jpeg|svg|gif)$/,
-                use: ['file-loader']
+                test: /\.(png|jpe?g|gif|svg)$/i,
+                loader: 'file-loader',
+                options: {
+                  name: '[hash].[name].[ext]',
+                  outputPath: 'images'
+                },
+            },
+            {
+                test: /\.html$/i,
+                loader: 'html-loader',
             }
         ]
     }
