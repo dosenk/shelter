@@ -1,11 +1,12 @@
 .help {
   @include blockSizes(100%, 611px);
+  display: flex;
+  justify-content: center;
   .help_wrapper {
     p {
       margin: 0;
     }
     @include blockSizes(1200px/1280px * 100%, 431px/611px * 100%);
-    margin: 0 auto;
     margin-top: 80px / 1280px * 100%;
     display: flex;
     flex-direction: column;

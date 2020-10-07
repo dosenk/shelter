@@ -1,0 +1,48 @@
+.donation {
+    @include blockSizes(100%, 464px);
+    display: flex;
+    justify-content: center;
+    background-color: #f6f6f6;
+    .donation_wrapper {
+        @include blockSizes(1200px/1280px * 100%, 284px/464px * 100%);
+        margin-top: 80px/1280px * 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .donation_wrapper__img {
+            @include blockSizes(505px/1200px * 100%, 261px/284px * 100%);
+            margin-right: 30px/1200px * 100%;
+        }
+        .donation_wrapper__info {
+            @include blockSizes(380px/1200px * 100%, 282px/284px * 100%);
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            p {
+                margin: 0;
+            }
+            h3 {
+                margin: 0;
+                @include fontStyle($ffl-G, normal, 400, 35px, 130%, 0.06em, #545454);
+            }
+            .donation_info__text {
+                @include fontStyle($ffl-G, normal, 400, 15px, 110%, 0.06em, #545454);
+            }
+            .donation_info__card {
+                @include blockSizes(349px, 43px);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #f1cdb3;
+                border-radius: 9px;
+                .donation__info_card-number {
+                    @include fontStyle($ffl-G, normal, 400, 20px, 115%, 0.06em, #545454);
+                    margin-left: 15px;
+                }
+            }
+            .donation_info__subtext {
+                @include fontStyle($ffl-A, italic, 400, 12px, 150%, normal, #b2b2b2);
+            }
+        }
+    }
+}
