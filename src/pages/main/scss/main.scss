@@ -71,7 +71,9 @@ header {
     @include fontStyle($ffl-A, normal, 400, 15px, 24px);
     margin-bottom: 5px;
     .active {
-      color: #fafafa;
+      & > a {
+        color: #fafafa;
+      }
       border-bottom: 3px solid #f1cdb3;
       padding-top: 3px;
     }
