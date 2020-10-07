@@ -1,0 +1,50 @@
+footer {
+    @include blockSizes(100%, 350px);
+    background: url("../assets/footer-gradient-background.png"),
+        radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), #211f20;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    .footer_wrapper {
+        @include blockSizes(1200px/1280px * 100%, 310px/350px * 100%);
+        display: flex;
+        justify-content: space-between;
+        p,
+        h3,
+        h4 {
+            margin: 0;
+        }
+        h3 {
+            @include fontStyle($ffl-G, normal, 400, 35px, 130%, 0.06em, #ffffff);
+            white-space: nowrap;
+        }
+        h4 {
+            @include fontStyle($ffl-G, normal, 400, 20px, 115%, 0.06em, #f1cdb3);
+            white-space: nowrap;
+        }
+        .footer_card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 16px;
+            .footer_card__info {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                img {
+                    margin-right: 20px;
+                }
+            }
+        }
+        .footer_contact {
+            @include blockSizes(278px, 234px);
+        }
+        .footer_location {
+            @include blockSizes(302px, 234px);
+            img {
+                @include blockSizes(22px, 32px);
+            }
+        }
+    }
+}
