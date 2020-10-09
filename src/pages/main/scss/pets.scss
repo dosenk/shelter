@@ -16,7 +16,7 @@
             text-align: center;
         }
         .pets_wrapper__main {
-            @include blockSizes(100%, 435px / 697px * 100%);
+            @include blockSizes(100%, 62.412%);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -56,7 +56,8 @@
                     }
                     .pets_card__text {
                         margin: 0;
-                        @include fontStyle($ffl-G, normal, 400, 20px, 23px, 0.06em, #545454)
+                        @include fontStyle($ffl-G, normal, 400, 20px, 23px, 0.06em, #545454);
+                        margin-left: 1px;
                     }
                     .pets_card__btn {
                         @include blockSizes(187px, 52px);
@@ -67,6 +68,8 @@
                         margin-bottom: 30px;
                         &:hover {
                             cursor: pointer;
+                            background-color: #FDDCC4;
+                            border: none;
                         }
                     }
                     &:hover {

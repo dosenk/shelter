@@ -12,16 +12,18 @@ footer {
         justify-content: space-between;
         p,
         h3,
-        h4 {
+        .card__info__h4 {
             margin: 0;
         }
         h3 {
             @include fontStyle($ffl-G, normal, 400, 35px, 130%, 0.06em, #ffffff);
             white-space: nowrap;
+            // padding-top: 1px;
         }
-        h4 {
+        .card__info__h4 {
             @include fontStyle($ffl-G, normal, 400, 20px, 115%, 0.06em, #f1cdb3);
             white-space: nowrap;
+            text-decoration: none;
         }
         .footer_card {
             display: flex;
@@ -34,6 +36,11 @@ footer {
                 align-items: center;
                 img {
                     margin-right: 20px;
+                }
+            }
+            .footer_location__boston {
+                a {
+                    padding-top: 1px;
                 }
             }
         }

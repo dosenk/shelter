@@ -10,11 +10,12 @@
         justify-content: center;
         align-items: center;
         .donation_wrapper__img {
-            @include blockSizes(505px/1200px * 100%, 261px/284px * 100%);
+            @include blockSizes(505px/1200px * 100%, 261px/284px*100%);
             margin-right: 30px/1200px * 100%;
+            margin-left: -1px;
         }
         .donation_wrapper__info {
-            @include blockSizes(380px/1200px * 100%, 282px/284px * 100%);
+            @include blockSizes(380px/1200px * 100%, 99.298%);
             display: flex;
             justify-content: space-between;
             flex-direction: column;
@@ -37,7 +38,12 @@
                 border-radius: 9px;
                 .donation__info_card-number {
                     @include fontStyle($ffl-G, normal, 400, 20px, 115%, 0.06em, #545454);
+                    text-decoration: none;
                     margin-left: 15px;
+                }
+                &:hover {
+                    cursor: pointer;
+                    background-color: #FDDCC4;
                 }
             }
             .donation_info__subtext {
