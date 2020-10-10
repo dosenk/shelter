@@ -1,5 +1,5 @@
 .help {
-  @include blockSizes(100%, 611px);
+  @include blockSizes(inherit, 611px);
   display: flex;
   justify-content: center;
   .help_wrapper {
@@ -39,6 +39,9 @@
           white-space: nowrap;
           text-align: center;
         }
+        @media screen and (min-width: 700px) and (max-width: 1279px) {
+          width: 157px;
+        }
       }
       .help_img_1 {
         & > p {
@@ -65,7 +68,11 @@
         & > img {
           margin-top: 2px;
           margin-left: 2px;
+          @media screen and (min-width: 700px) and (max-width: 1279px) {
+            margin-left: 0;
+          }
         }
+        
       }
       .help_img_5 {
         & > p {
@@ -74,6 +81,9 @@
         & > img {
           margin-right: 2px;
           margin-left: 2px;
+          @media screen and (min-width: 700px) and (max-width: 1279px) {
+            margin-left: 0;
+          }
         }
       }
       .help_img_6 {
@@ -83,6 +93,9 @@
         & > img {
           margin-top: 3px;
           margin-right: 2px;
+          @media screen and (min-width: 700px) and (max-width: 1279px) {
+            margin-right: 0;
+          }
         }
       }
       .help_img_7 {
@@ -97,6 +110,9 @@
         & > img {
           margin-top: 4px;
           margin-left: 2px;
+          @media screen and (min-width: 700px) and (max-width: 1279px) {
+            margin-left: 0;
+          }
         }
       }
       .help_img_9 {
@@ -105,8 +121,22 @@
         }
         & > img {
           margin-left: 3px;
+          @media screen and (min-width: 700px) and (max-width: 1279px) {
+            margin-left: 0;
+          }
         }
       }
+      @media screen and (min-width: 700px) and (max-width: 1279px) {
+        height: 449px;
+        width: 698px;
+      }
     }
+    @media screen and (min-width: 700px) and (max-width: 1279px) {
+      height: 599px;
+      margin-top: 80px;
+    }
+  }
+  @media screen and (min-width: 700px) and (max-width: 1279px) {
+    height: 779px;
   }
 }

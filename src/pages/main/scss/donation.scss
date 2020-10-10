@@ -1,54 +1,67 @@
 .donation {
-    @include blockSizes(100%, 464px);
+  @include blockSizes(inherit, 464px);
+  display: flex;
+  justify-content: center;
+  background-color: #f6f6f6;
+  .donation_wrapper {
+    @include blockSizes(1200px/1280px * 100%, 284px/464px * 100%);
+    margin-top: 80px/1280px * 100%;
     display: flex;
     justify-content: center;
-    background-color: #f6f6f6;
-    .donation_wrapper {
-        @include blockSizes(1200px/1280px * 100%, 284px/464px * 100%);
-        margin-top: 80px/1280px * 100%;
+    align-items: center;
+    .donation_wrapper__img {
+      @include blockSizes(505px);
+      margin-right: 30px/1200px * 100%;
+      margin-left: -1px;
+      @media screen and (min-width: 700px) and (max-width: 980px) {
+        order: 2;
+        margin-right: 0;
+      }
+    }
+    .donation_wrapper__info {
+      @include blockSizes(380px, 282px);
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      p {
+        margin: 0;
+      }
+      h3 {
+        margin: 0;
+        @include fontStyle($ffl-G, normal, 400, 35px, 130%, 0.06em, #545454);
+      }
+      .donation_info__text {
+        @include fontStyle($ffl-G, normal, 400, 15px, 110%, 0.06em, #545454);
+      }
+      .donation_info__card {
+        @include blockSizes(349px, 43px);
         display: flex;
         justify-content: center;
         align-items: center;
-        .donation_wrapper__img {
-            @include blockSizes(505px/1200px * 100%, 261px/284px*100%);
-            margin-right: 30px/1200px * 100%;
-            margin-left: -1px;
+        background-color: #f1cdb3;
+        border-radius: 9px;
+        .donation__info_card-number {
+          @include fontStyle($ffl-G, normal, 400, 20px, 115%, 0.06em, #545454);
+          text-decoration: none;
+          margin-left: 15px;
         }
-        .donation_wrapper__info {
-            @include blockSizes(380px/1200px * 100%, 99.298%);
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-            p {
-                margin: 0;
-            }
-            h3 {
-                margin: 0;
-                @include fontStyle($ffl-G, normal, 400, 35px, 130%, 0.06em, #545454);
-            }
-            .donation_info__text {
-                @include fontStyle($ffl-G, normal, 400, 15px, 110%, 0.06em, #545454);
-            }
-            .donation_info__card {
-                @include blockSizes(349px, 43px);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: #f1cdb3;
-                border-radius: 9px;
-                .donation__info_card-number {
-                    @include fontStyle($ffl-G, normal, 400, 20px, 115%, 0.06em, #545454);
-                    text-decoration: none;
-                    margin-left: 15px;
-                }
-                &:hover {
-                    cursor: pointer;
-                    background-color: #FDDCC4;
-                }
-            }
-            .donation_info__subtext {
-                @include fontStyle($ffl-A, italic, 400, 12px, 150%, normal, #b2b2b2);
-            }
+        &:hover {
+          cursor: pointer;
+          background-color: #fddcc4;
         }
+      }
+      .donation_info__subtext {
+        @include fontStyle($ffl-A, italic, 400, 12px, 150%, normal, #b2b2b2);
+      }
     }
+    @media screen and (min-width: 700px) and (max-width: 980px) {
+      flex-direction: column;
+      margin-top: 80px;
+      height: 603px;
+      justify-content: space-between;
+    }
+  }
+  @media screen and (min-width: 700px) and (max-width: 980px) {
+    height: 783px;
+  }
 }

@@ -1,105 +1,121 @@
 .pets {
-    @include blockSizes(1280px, 877px);
-    background-color: #F6F6F6;
+  @include blockSizes(inherit, 877px);
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: space-around;
+  .pets_wrapper {
+    @include blockSizes(1200px / 1280px * 100%, 697px / 877px * 100%);
+    margin-top: 80px / 1280px * 100%;
     display: flex;
-    justify-content: space-around;
-    .pets_wrapper {
-        @include blockSizes(1200px / 1280px * 100%, 697px / 877px * 100%);
-        margin-top: 80px / 1280px * 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        .pets_wrapper__heading {
-            @include fontStyle($ffl-G, normal, 400, 35px, 130%, 0.06em, #545454);
-            margin: 1px 0 0 2px;
-            text-align: center;
-        }
-        .pets_wrapper__main {
-            @include blockSizes(100%, 62.412%);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            .pets_btn {
-                @include blockSizes(52px, 52px);
-                border: 2px solid #F1CDB3;
-                border-radius: 100px;
-                background-color: #F6F6F6;
-                &:hover {
-                    cursor: pointer;
-                    background-color: #FDDCC4;
-                    border: none;
-                }
-            }
-            .pets_btn__left {
-                background: url('../assets/Arrow_left.png') no-repeat;
-                background-position: center;
-            }
-            .pets_btn__rigth {
-                background: url('../assets/Arrow_right.png') no-repeat;
-                background-position: center;
-            }
-            .pets_cards {
-                @include blockSizes(990px / 1200px * 100%, 100%);
-                display: flex;
-                justify-content: space-between;
-                .pets_cards__item {
-                    @include blockSizes(270px / 990px * 100%, 435px / 435px * 100%);
-                    background-color: #FAFAFA;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    align-items: center;
-                    .pets_card__img {
-                        margin-top: 0;
-                        @include blockSizes(100%, 270px / 435px * 100%);
-                    }
-                    .pets_card__text {
-                        margin: 0;
-                        @include fontStyle($ffl-G, normal, 400, 20px, 23px, 0.06em, #545454);
-                        margin-left: 1px;
-                    }
-                    .pets_card__btn {
-                        @include blockSizes(187px, 52px);
-                        border: 2px solid #F1CDB3;
-                        border-radius: 100px;
-                        @include fontStyle($ffl-G, normal, 400, 17px, 130%, 0.06em, #292929);
-                        background-color: #FAFAFA;
-                        margin-bottom: 30px;
-                        &:hover {
-                            cursor: pointer;
-                            background-color: #FDDCC4;
-                            border: none;
-                        }
-                    }
-                    &:hover {
-                        cursor: pointer;
-                        background-color: #FFFFFF;
-                    }
-                }
-                #pets_card_1 {
-                    .pets_card__img {
-                        background: url('../assets/pets-katrine.png') no-repeat;
-                    }
-                }
-                #pets_card_2 {
-                    .pets_card__img {
-                        background: url('../assets/pets-jennifer.png') no-repeat;
-                    }
-                }
-                #pets_card_3 {
-                    .pets_card__img {
-                        background: url('../assets/pets-woody.png') no-repeat;
-                    }
-                }
-            }
-        }
-
-        .pets_wrapper__btn {
-            @include blockSizes(261px, 52px);
-            @include fontStyle($ffl-G, normal, 400, 17px, 130%, 0.06em, #292929);
-            margin-left: 1px;
-            @extend %big_btn;
-        }
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .pets_wrapper__heading {
+      @include fontStyle($ffl-G, normal, 400, 35px, 130%, 0.06em, #545454);
+      margin: 1px 0 0 2px;
+      text-align: center;
     }
+    .pets_wrapper__main {
+      @include blockSizes(100%, 62.412%);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .pets_btn {
+        @include blockSizes(52px, 52px);
+        border: 2px solid #f1cdb3;
+        border-radius: 100px;
+        background-color: #f6f6f6;
+        &:hover {
+          cursor: pointer;
+          background-color: #fddcc4;
+          border: none;
+        }
+      }
+      .pets_btn__left {
+        background: url("../assets/Arrow_left.png") no-repeat;
+        background-position: center;
+      }
+      .pets_btn__rigth {
+        background: url("../assets/Arrow_right.png") no-repeat;
+        background-position: center;
+      }
+      .pets_cards {
+        @include blockSizes(990px / 1200px * 100%, 100%);
+        display: flex;
+        justify-content: space-between;
+        .pets_cards__item {
+          @include blockSizes(270px, 435px / 435px * 100%);
+          background-color: #fafafa;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          .pets_card__img {
+            margin-top: 0;
+            @include blockSizes(270px);
+          }
+          .pets_card__text {
+            margin: 0;
+            @include fontStyle(
+              $ffl-G,
+              normal,
+              400,
+              20px,
+              23px,
+              0.06em,
+              #545454
+            );
+            margin-left: 1px;
+          }
+          .pets_card__btn {
+            @include blockSizes(187px, 52px);
+            border: 2px solid #f1cdb3;
+            border-radius: 100px;
+            @include fontStyle(
+              $ffl-G,
+              normal,
+              400,
+              17px,
+              130%,
+              0.06em,
+              #292929
+            );
+            background-color: #fafafa;
+            margin-bottom: 30px;
+            &:hover {
+              cursor: pointer;
+              background-color: #fddcc4;
+              border: none;
+            }
+          }
+          &:hover {
+            cursor: pointer;
+            background-color: #ffffff;
+          }
+          @media screen and (min-width: 700px) and (max-width: 1100px) {
+            &:last-child {
+              display: none;
+            }
+          }
+        }
+        @media screen and (min-width: 700px) and (max-width: 1100px) {
+              width: 580px;
+        }
+      }
+      @media screen and (min-width: 700px) and (max-width: 1100px) {
+        overflow: hidden;
+        width: 708px;
+      }
+    }
+
+    .pets_wrapper__btn {
+      @include blockSizes(261px, 52px);
+      @include fontStyle($ffl-G, normal, 400, 17px, 130%, 0.06em, #292929);
+      margin-left: 1px;
+      @extend %big_btn;
+    }
+    @media screen and (min-width: 700px) and (max-width: 1100px) {
+      margin-top: 79px;
+    }
+  }
 }

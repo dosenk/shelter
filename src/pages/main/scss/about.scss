@@ -1,31 +1,41 @@
 .about {
-    $about_h: 588px;
-    @include blockSizes(1280px, $about_h);
+  @include blockSizes(inherit, 588px);
+  display: flex;
+  justify-content: space-around;
+  .about_wrapper {
+    @include blockSizes(850px / 1280px * 100%, 408px / 588px * 100%);
+    margin-top: 80px / 1280px * 100%;
     display: flex;
-    justify-content: space-around;
-    .about_wrapper {
-        @include blockSizes(850px / 1280px * 100%, 408px / 588px * 100%);
-        margin-top: 80px / 1280px * 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        .about_wrapper__img {
-            @include blockSizes(300px / 850px * 100%, 100%);
-            background: url('../assets/about-pets.png') no-repeat;
-        }
-        .about_wrapper__text {
-            @include blockSizes(430px / 850px * 100%, 380px / 408px * 100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            .about_heading {
-                margin: 0;
-                @include fontStyle($ffl-G, normal, 400, 35px, 130%, 0.06em, #545454);
-            }
-            .about_subHeading {
-                margin: 0;
-                @include fontStyle($ffl-A, normal, 400, 15px, 160%, normal, #4C4C4C);
-            }
-        }
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .about_wrapper__img {
+      @include blockSizes(300px);
+      @media screen and (min-width: 700px) and (max-width: 855px) {
+        order: 2;
+        margin-top: 80px;
+      }
     }
+    .about_wrapper__text {
+      @include blockSizes(430px, 380px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .about_heading {
+        margin: 0;
+        @include fontStyle($ffl-G, normal, 400, 35px, 130%, 0.06em, #545454);
+      }
+      .about_subHeading {
+        margin: 0;
+        @include fontStyle($ffl-A, normal, 400, 15px, 160%, normal, #4c4c4c);
+      }
+    }
+    @media screen and (min-width: 700px) and (max-width: 1100px) {
+      justify-content: center;
+      margin-top: 80px;
+    }
+  }
+  @media screen and (min-width: 700px) and (max-width: 1100px) {
+    height: 1048px;
+  }
 }
