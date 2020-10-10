@@ -3,7 +3,7 @@ footer {
   background: url("../assets/noise_transparent.png"),
     radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
     #211f20;
-    background-repeat: no-repeat;
+    // background-repeat: no-repeat;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -20,7 +20,9 @@ footer {
     h3 {
       @include fontStyle($ffl-G, normal, 400, 35px, 130%, 0.06em, #ffffff);
       white-space: nowrap;
-      // padding-top: 1px;
+      @media screen and (min-width: 700px) and (max-width: 980px) {
+        margin-top: 1px;
+      }
     }
     .card__info__h4 {
       @include fontStyle($ffl-G, normal, 400, 20px, 115%, 0.06em, #f1cdb3);
@@ -56,6 +58,11 @@ footer {
       @include blockSizes(302px, 234px);
       img {
         @include blockSizes(22px, 32px);
+      }
+      @media screen and (min-width: 700px) and (max-width: 980px) {
+        h3 {
+          margin-left: 1px;
+        }
       }
     }
     @media screen and (min-width: 700px) and (max-width: 980px) {
