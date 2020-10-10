@@ -14,6 +14,9 @@
       @include fontStyle($ffl-G, normal, 400, 35px, 130%, 0.06em, #545454);
       margin: 1px 0 0 2px;
       text-align: center;
+      @media screen and (max-width: 700px) {
+        @include fontStyle($ffl-G, normal, 400, 25px, 130%, 0.06em, #545454);
+      }
     }
     .pets_wrapper__main {
       @include blockSizes(100%, 62.412%);
@@ -34,10 +37,18 @@
       .pets_btn__left {
         background: url("../assets/Arrow_left.png") no-repeat;
         background-position: center;
+        @media screen and (max-width: 700px) {
+          order: 1;
+          margin: 0 40px;
+        }
       }
       .pets_btn__rigth {
         background: url("../assets/Arrow_right.png") no-repeat;
         background-position: center;
+        @media screen and (max-width: 700px) {
+          order: 2;
+          margin: 0 40px;
+        }
       }
       .pets_cards {
         @include blockSizes(990px / 1200px * 100%, 100%);
@@ -92,20 +103,38 @@
             cursor: pointer;
             background-color: #ffffff;
           }
-          @media screen and (min-width: 700px) and (max-width: 1100px) {
+          @media screen and (max-width: 1100px) {
             &:last-child {
               display: none;
             }
           }
+          @media screen and (max-width: 700px) {
+            &:nth-child(2) {
+              display: none;
+            }
+          }
         }
-        @media screen and (min-width: 700px) and (max-width: 1100px) {
-              width: 580px;
-              margin-top: -1px;
+        @media screen and (max-width: 1100px) {
+          width: 580px;
+          margin-top: -1px;
+        }
+        @media screen and (max-width: 700px) {
+          width: 300px;
+          height: 435px;
+          margin-top: -1px;
+          justify-content: center;
         }
       }
-      @media screen and (min-width: 700px) and (max-width: 1100px) {
-        overflow: hidden;
+      @media screen and (max-width: 1100px) {
         width: 708px;
+      }
+      @media screen and (max-width: 700px) {
+        width: 320px;
+        height: 507px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        align-content: space-between;
       }
     }
 
@@ -115,8 +144,15 @@
       margin-left: 1px;
       @extend %big_btn;
     }
-    @media screen and (min-width: 700px) and (max-width: 1100px) {
+    @media screen and (max-width: 1100px) {
       margin-top: 80px;
     }
+    @media screen and (max-width: 700px) {
+      margin-top: 42px;
+      height: 707px;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    height: 791px;
   }
 }

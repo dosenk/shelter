@@ -13,9 +13,13 @@
       @include blockSizes(505px);
       margin-right: 30px/1200px * 100%;
       margin-left: -1px;
-      @media screen and (min-width: 700px) and (max-width: 980px) {
+      @media screen and (max-width: 980px) {
         order: 2;
         margin-right: 0;
+      }
+      @media screen and (max-width: 700px) {
+        width: 260px;
+        height: 135.2px;
       }
     }
     .donation_wrapper__info {
@@ -29,9 +33,17 @@
       h3 {
         margin: 0;
         @include fontStyle($ffl-G, normal, 400, 35px, 130%, 0.06em, #545454);
+        @media screen and (max-width: 700px) {
+          @include fontStyle($ffl-G, normal, 400, 25px, 130%, 0.06em, #545454);
+          text-align: center;
+        }
       }
       .donation_info__text {
         @include fontStyle($ffl-G, normal, 400, 15px, 110%, 0.06em, #545454);
+        @media screen and (max-width: 700px) {
+          @include fontStyle($ffl-G, normal, 400, 15px, 160%, normal, #545454);
+          text-align: center;
+        }
       }
       .donation_info__card {
         @include blockSizes(349px, 43px);
@@ -44,24 +56,48 @@
           @include fontStyle($ffl-G, normal, 400, 20px, 115%, 0.06em, #545454);
           text-decoration: none;
           margin-left: 15px;
+          @media screen and (max-width: 700px) {
+            @include fontStyle($ffl-G, normal, 400, 15px, 110%, 0.06em, #545454);
+          }
         }
         &:hover {
           cursor: pointer;
           background-color: #fddcc4;
         }
+        @media screen and (max-width: 700px) {
+          width: 281px;
+          height: 43px;
+        }
       }
       .donation_info__subtext {
         @include fontStyle($ffl-A, italic, 400, 12px, 150%, normal, #b2b2b2);
+        @media screen and (max-width: 700px) {
+          width: 280px;
+          text-align: justify;
+        }
       }
+      @media screen and (max-width: 700px) {
+        width: 300px;
+        height: 281px;
+        align-items: center;
+      }
+     
     }
-    @media screen and (min-width: 700px) and (max-width: 980px) {
+    @media screen and (max-width: 980px) {
       flex-direction: column;
       margin-top: 80px;
       height: 603px;
       justify-content: space-between;
     }
+    @media screen and (max-width: 700px) {
+      margin-top: 42px;
+      height: 458px;
+    }
   }
-  @media screen and (min-width: 700px) and (max-width: 980px) {
+  @media screen and (max-width: 980px) {
     height: 783px;
+  }
+  @media screen and (max-width: 700px) {
+    height: 542.2px;
   }
 }

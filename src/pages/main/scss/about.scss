@@ -11,9 +11,13 @@
     flex-wrap: wrap;
     .about_wrapper__img {
       @include blockSizes(300px);
-      @media screen and (min-width: 700px) and (max-width: 855px) {
+      @media screen and (max-width: 855px) {
         order: 2;
         margin-top: 80px;
+      }
+      @media screen and (max-width: 700px) {
+        margin-top: 42px;
+        width: 260px;
       }
     }
     .about_wrapper__text {
@@ -24,18 +28,34 @@
       .about_heading {
         margin: 0;
         @include fontStyle($ffl-G, normal, 400, 35px, 130%, 0.06em, #545454);
+        @media screen and (max-width: 700px) {
+          @include fontStyle($ffl-G, normal, 400, 25px, 130%, 0.06em, #545454);
+          text-align: center;
+        }
       }
       .about_subHeading {
         margin: 0;
         @include fontStyle($ffl-A, normal, 400, 15px, 160%, normal, #4c4c4c);
       }
+      @media screen and (max-width: 700px) {
+        height: 494px;
+      }
     }
-    @media screen and (min-width: 700px) and (max-width: 1100px) {
+    @media screen and (max-width: 1100px) {
       justify-content: center;
       margin-top: 80px;
     }
+    @media screen and (max-width: 700px) {
+      justify-content: center;
+      margin-top: 42px;
+      text-align: justify;
+      width: 270px;
+    }
   }
-  @media screen and (min-width: 700px) and (max-width: 1100px) {
+  @media screen and (max-width: 1100px) {
     height: 1048px;
+  }
+  @media screen and (max-width: 700px) {
+    height: 974px;
   }
 }

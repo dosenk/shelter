@@ -95,10 +95,16 @@ header {
       justify-content: space-between;
       align-items: center;
     }
+    @media screen and (max-width: 707px) {
+      display: none;
+    }
   }
-  @media screen and (min-width: 700px) and (max-width: 855px) {
+  @media screen and (max-width: 855px) {
     padding-top: 30px;
     width: 708px;
+  }
+  @media screen and (max-width: 707px) {
+    padding-left: 10px;
   }
 }
 
@@ -125,10 +131,17 @@ main {
       }
       .content_heading {
         @include fontStyle($ffl-G, normal, 400, 44px, 130%, normal, #ffffff);
+        @media screen and (max-width: 707px) {
+          @include fontStyle($ffl-G, normal, 400, 25px, 130%, 0.06em, #ffffff);
+          text-align: center;
+        }
       }
       .content_subheading {
         margin-bottom: 1px;
         @include fontStyle($ffl-A, normal, 400, 15px, 160%, normal);
+        @media screen and (max-width: 707px) {
+          text-align: center;
+        }
       }
       button {
         @include blockSizes(207px, 52px);
@@ -136,27 +149,48 @@ main {
         margin-bottom: 1px;
         @extend %big_btn;
       }
-      @media screen and (min-width: 700px) and (max-width: 855px) {
+      @media screen and (max-width: 855px) {
         min-width: 460px;
         margin-top: 0;
         button {
           margin: 0 auto;
         }
       }
+      @media screen and (max-width: 707px) {
+        align-items: center;
+        width: 300px/460px * 100%;
+        min-width: 300px;
+        height: 296px;
+      }
     }
-    @media screen and (min-width: 700px) and (max-width: 855px) {
+    @media screen and (max-width: 855px) {
       padding-top: 181px;
       width: 92.19%;
       justify-content: center;
+    }
+    @media screen and (max-width: 707px) {
+      padding-top: 180px;
+      width: 300px;
+      height: 673px;
+      justify-content: space-between;
     }
   }
 
   .main_wrapper__img {
     @include blockSizes(698px / 1200px * 100%);
-    @media screen and (min-width: 700px) and (max-width: 855px) {
+    @media screen and (max-width: 855px) {
       margin-top: 100px;
-      min-width: 569px;
+      width: 569px;
+      height: 593px;
       margin-left: 139px;
     }
+    @media screen and (max-width: 707px) {
+      // margin-top: 0;
+      width: 260px;
+      margin-left: 40px;
+    }
+  }
+  @media screen and (max-width: 707px) {
+    height: 853px;
   }
 }
