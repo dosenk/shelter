@@ -3,7 +3,6 @@ footer {
   background: url("../assets/noise_transparent.png"),
     radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
     #211f20;
-  // background-repeat: no-repeat;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -21,12 +20,12 @@ footer {
       @include fontStyle($ffl-G, normal, 400, 35px, 130%, 0.06em, #ffffff);
       @media screen and (max-width: 980px) {
         margin-top: 1px;
-        text-align: center;
       }
-      @media screen and (max-width: 980px) {
+      @media screen and (max-width: 700px) {
         @include fontStyle($ffl-G, normal, 400, 25px, 130%, 0.06em, #ffffff);
         width: 290px;
         white-space: normal;
+        text-align: center;
       }
     }
     .card__info__h4 {
@@ -55,6 +54,9 @@ footer {
         a {
           padding-top: 1px;
         }
+        @media screen and (max-width: 980px) {
+          margin-bottom: 2px;
+        }
       }
       @media screen and (max-width: 980px) {
         margin: 0 30px;
@@ -77,21 +79,24 @@ footer {
       img {
         @include blockSizes(22px, 32px);
       }
-      @media screen and (max-width: 980px) {
-        h3 {
+      h3 {
+        margin-left: 1px;
+        margin-top: 1px;
+        @media screen and (max-width: 980px) {
           margin-left: 1px;
+        }
+        @media screen and (max-width: 700px) {
+          margin-left: 5px;
+          margin-top: 0;
         }
       }
       @media screen and (max-width: 700px) {
         @include blockSizes(300px, 222px);
-        h3 {
-          margin-left: 5px;
-        }
       }
     }
     & > img {
       @media screen and (max-width: 980px) {
-        @include blockSizes(310px, 310px);
+        @include blockSizes(300px, 310px);
       }
       @media screen and (max-width: 700px) {
         @include blockSizes(260px, 269px);
@@ -103,7 +108,7 @@ footer {
       flex-wrap: wrap;
       align-content: space-between;
     }
-    @media screen and (max-width: 980px) {
+    @media screen and (max-width: 700px) {
       height: 780px;
     }
   }

@@ -99,11 +99,28 @@ header {
       display: none;
     }
   }
+  .burger {
+    @include blockSizes(30px, 22px);
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 2px;
+    span {
+      display: block;
+      @include blockSizes(100%, 2px);
+      background-color: #F1CDB3;
+    }
+    @media screen and (max-width: 707px) {
+      display: flex;
+    }
+  }
   @media screen and (max-width: 855px) {
     padding-top: 30px;
     width: 708px;
   }
   @media screen and (max-width: 707px) {
+    margin: 0;
+    @include blockSizes(257px, 60px);
     padding-left: 10px;
   }
 }
@@ -185,8 +202,9 @@ main {
       margin-left: 139px;
     }
     @media screen and (max-width: 707px) {
-      // margin-top: 0;
+      margin-top: 105px;
       width: 260px;
+      height: 271.77px;
       margin-left: 40px;
     }
   }

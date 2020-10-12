@@ -19,6 +19,7 @@
       margin-top: 1px;
       @media screen and (max-width: 700px) {
         @include fontStyle($ffl-G, normal, 400, 25px, 130%, 0.06em, #545454);
+        margin-left: 1px;
       }
     }
     .help_wrapper__content {
@@ -41,6 +42,7 @@
           @media screen and (max-width: 700px) {
             width: 50px;
             height: 50px;
+            margin-bottom: 20px;
           }
         }
         .help_content__text {
@@ -58,14 +60,18 @@
               0.06em,
               #545454
             );
+            width: 130px;
+            height: 17px;
           }
         }
         @media screen and (max-width: 1279px) {
           width: 157px;
         }
         @media screen and (max-width: 700px) {
-          width: 90px;
-          height: 90px;
+          justify-content: flex-end;
+          width: 130px;
+          height: 87px;
+          margin: 0;
         }
       }
       .help_img_1 {
@@ -136,6 +142,7 @@
           margin-left: 2px;
           @media screen and (max-width: 1279px) {
             margin-left: 0;
+            margin-top: 4px;
           }
         }
       }
@@ -155,9 +162,9 @@
         width: 698px;
       }
       @media screen and (max-width: 700px) {
-        height: 590px;
-        width: 280px;
-        margin-top: 42px;
+        height: 555px;
+        width: 290px;
+        margin-top: 40px;
         justify-content: space-between;
       }
     }
@@ -167,7 +174,7 @@
     }
     @media screen and (max-width: 700px) {
       height: 662px;
-      margin-top: 40px;
+      margin-top: 41px;
     }
   }
   @media screen and (max-width: 1279px) {
