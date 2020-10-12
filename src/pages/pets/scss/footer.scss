@@ -1,0 +1,121 @@
+footer {
+  @include blockSizes(inherit, 350px);
+  background: url("../assets/noise_transparent.png"),
+    radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
+    #211f20;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  .footer_wrapper {
+    @include blockSizes(1200px/1280px * 100%, 310px/350px * 100%);
+    display: flex;
+    justify-content: space-between;
+    p,
+    h3,
+    .card__info__h4 {
+      margin: 0;
+    }
+    h3 {
+      @include fontStyle($ffl-G, normal, 400, 35px, 130%, 0.06em, #ffffff);
+      @media screen and (max-width: 980px) {
+        margin-top: 1px;
+      }
+      @media screen and (max-width: 700px) {
+        @include fontStyle($ffl-G, normal, 400, 25px, 130%, 0.06em, #ffffff);
+        width: 290px;
+        white-space: normal;
+        text-align: center;
+      }
+    }
+    .card__info__h4 {
+      @include fontStyle($ffl-G, normal, 400, 20px, 115%, 0.06em, #f1cdb3);
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    .footer_card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: 16px;
+      & > h3 {
+        width: 290px;
+      }
+      .footer_card__info {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        img {
+          margin-right: 20px;
+        }
+      }
+      .footer_location__boston {
+        a {
+          padding-top: 1px;
+        }
+        @media screen and (max-width: 980px) {
+          margin-bottom: 2px;
+        }
+      }
+      @media screen and (max-width: 980px) {
+        margin: 0 30px;
+      }
+      @media screen and (max-width: 700px) {
+        margin: 0;
+      }
+    }
+
+    .footer_contact {
+      @include blockSizes(278px, 234px);
+      @media screen and (max-width: 700px) {
+        @include blockSizes(278px, 208px);
+        align-items: center;
+      }
+    }
+
+    .footer_location {
+      @include blockSizes(302px, 234px);
+      img {
+        @include blockSizes(22px, 32px);
+      }
+      h3 {
+        margin-left: 1px;
+        margin-top: 1px;
+        @media screen and (max-width: 980px) {
+          margin-left: 1px;
+        }
+        @media screen and (max-width: 700px) {
+          margin-left: 5px;
+          margin-top: 0;
+        }
+      }
+      @media screen and (max-width: 700px) {
+        @include blockSizes(300px, 222px);
+      }
+    }
+    & > img {
+      @media screen and (max-width: 980px) {
+        @include blockSizes(300px, 310px);
+      }
+      @media screen and (max-width: 700px) {
+        @include blockSizes(260px, 269px);
+      }
+    }
+    @media screen and (max-width: 980px) {
+      height: 609px;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-content: space-between;
+    }
+    @media screen and (max-width: 700px) {
+      height: 780px;
+    }
+  }
+  @media screen and (max-width: 980px) {
+    height: 639px;
+  }
+  @media screen and (max-width: 700px) {
+    height: 809px;
+  }
+}

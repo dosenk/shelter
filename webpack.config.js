@@ -9,6 +9,7 @@ module.exports = {
     mode: 'development',
     entry: {
         main: './src/pages/index.js',
+        petsPage: './src/pages/pets/pets.js'
     },
     output: {
         filename: '[name].[contenthash].js',
@@ -20,11 +21,19 @@ module.exports = {
     devtool: isDev ? 'source-map' : '',
     plugins: [
         new HTMLWebpackPlugin({
-            template: './src/pages/main/main.html'
+            filename: 'index.html',
+            template: './src/pages/main/main.html',
+            chunks: ['main']
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'pets.html',
+            template: './src/pages/pets/pets.html',
+            chunks: ['petsPage']
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
-            filename: '[name].[contenthash].css'
+            filename: isDev ? '[name].css' : '[name].[contenthash].css',
+            chunkFilename: isDev ? '[id].css' : '[id].[contenthash].css',
         })
     ],
     module: {
@@ -38,10 +47,19 @@ module.exports = {
                 use: [
                     {
                        loader: MiniCssExtractPlugin.loader, 
-                       options: {},
+                       options: {
+                        // publicPath: (resourcePath, context) => {
+                        //   return path.relative(path.dirname(resourcePath), context) + '/';
+                        // },
+                      },
                     },
                     'css-loader',
-                    'sass-loader'
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    }
                     ]
             },
             {
