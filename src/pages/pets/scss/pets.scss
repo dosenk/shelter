@@ -19,9 +19,16 @@
       @include fontStyle($ffl-G, normal, 400, 35px, 130%, 0.06em, #545454);
       text-align: center;
       margin-left: 3px;
+      @media screen and (max-width: 1090px) {
+        margin-top: 20px;
+      }
+      @media screen and (max-width: 700px) {
+        @include fontStyle($ffl-G, normal, 400, 25px, 130%, 0.06em, #545454);
+      }
     }
     .our-friend__wrapper_items {
       @include blockSizes(100%, 930px);
+      overflow: hidden;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -61,6 +68,17 @@
           cursor: pointer;
           background-color: #ffffff;
         }
+        @media screen and (max-width: 1090px) {
+          margin-top: 30px;
+        }
+      }
+      @media screen and (max-width: 1090px) {
+        @include blockSizes(580px, 1422px);
+        margin-top: -13px;
+      }
+      @media screen and (max-width: 700px) {
+        @include blockSizes(270px, 1425px);
+        margin-top: -26px;
       }
     }
     .our-friend__wrapper_controls {
@@ -71,29 +89,50 @@
         width: 100%;
 
         .our-friend__wrapper_controls-items-item {
-          width: 52px;
-          height: 52px;
           @include blockSizes(52px, 52px);
           @include fontStyle($ffl-G, normal, 400, 20px, 115%, 0.06em, #292929);
-          padding: 0;
+          padding-bottom: 2px;
+          padding-left: 7px;
           text-align: center;
+          border: 2px solid #f1cdb3;
           border-radius: 50%;
+          background-color: #f6f6f6;
+          &:hover {
+            cursor: pointer;
+            background-color: #f1cdb3;
+          }
         }
         .our-friend__wrapper_controls-items-item_disabled {
           border: 2px solid #cdcdcd;
           color: #cdcdcd;
           cursor: auto;
-        }
-        .our-friend__wrapper_controls-items-item_disabled:hover {
-          border: 2px solid #cdcdcd;
-          color: #cdcdcd;
-          background: none;
-          cursor: auto;
+          &:hover {
+            cursor: auto;
+            background-color: #f6f6f6;
+          }
         }
         .our-friend__wrapper_controls-items-item_active {
           background: #f1cdb3;
+          border: none;
         }
       }
+      @media screen and (max-width: 700px) {
+        width: 300px;
+      }
     }
+    @media screen and (max-width: 1090px) {
+      height: 1597px;
+      margin-top: 60px;
+    }
+    @media screen and (max-width: 700px) {
+      @include blockSizes(300px, 1585px);
+      margin-top: 22px;
+    }
+  }
+  @media screen and (max-width: 1090px) {
+    height: 1733px;
+  }
+  @media screen and (max-width: 700px) {
+    height: 1649px;
   }
 }
