@@ -13,7 +13,7 @@ module.exports = {
     },
     output: {
         filename: '[name].[contenthash].js',
-        path: path.resolve(__dirname, 'dist')
+        path: isDev ? path.resolve(__dirname, 'dist') : path.resolve(__dirname, 'prod')
     }, 
     devServer: {
         port: 4200
