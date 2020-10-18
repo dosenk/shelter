@@ -1,6 +1,6 @@
 footer {
   @include blockSizes(inherit, 350px);
-  background: url("../assets/noise_transparent.png"),
+  background: url("../../assets/noise_transparent.png"),
     radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
     #211f20;
   display: flex;
@@ -21,7 +21,7 @@ footer {
       @media screen and (max-width: 980px) {
         margin-top: 1px;
       }
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 750px) {
         @include fontStyle($ffl-G, normal, 400, 25px, 130%, 0.06em, #ffffff);
         width: 290px;
         white-space: normal;
@@ -61,14 +61,14 @@ footer {
       @media screen and (max-width: 980px) {
         margin: 0 30px;
       }
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 750px) {
         margin: 0;
       }
     }
 
     .footer_contact {
       @include blockSizes(278px, 234px);
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 750px) {
         @include blockSizes(278px, 208px);
         align-items: center;
       }
@@ -85,12 +85,12 @@ footer {
         @media screen and (max-width: 980px) {
           margin-left: 1px;
         }
-        @media screen and (max-width: 700px) {
+        @media screen and (max-width: 750px) {
           margin-left: 5px;
           margin-top: 0;
         }
       }
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 750px) {
         @include blockSizes(300px, 222px);
       }
     }
@@ -98,7 +98,7 @@ footer {
       @media screen and (max-width: 980px) {
         @include blockSizes(300px, 310px);
       }
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 750px) {
         @include blockSizes(260px, 269px);
       }
     }
@@ -108,14 +108,14 @@ footer {
       flex-wrap: wrap;
       align-content: space-between;
     }
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 750px) {
       height: 780px;
     }
   }
   @media screen and (max-width: 980px) {
     height: 639px;
   }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 750px) {
     height: 809px;
   }
 }

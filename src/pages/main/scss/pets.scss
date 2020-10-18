@@ -35,7 +35,7 @@
         }
       }
       .pets_btn__left {
-        background: url("../assets/Arrow_left.png") no-repeat;
+        background: url("../../assets/Arrow_left.png") no-repeat;
         background-position: center;
         @media screen and (max-width: 700px) {
           order: 1;
@@ -43,7 +43,7 @@
         }
       }
       .pets_btn__rigth {
-        background: url("../assets/Arrow_right.png") no-repeat;
+        background: url("../../assets/Arrow_right.png") no-repeat;
         background-position: center;
         @media screen and (max-width: 700px) {
           order: 2;
