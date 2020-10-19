@@ -1,10 +1,11 @@
 import './main.scss';
+import '../../assets/js/pets';
 
 const burger = document.querySelector('.burger');
-burger.addEventListener('click', (event) => {
-  // if (event.target.classlist)
-  console.log(event);
-  console.log(event);
-});
+const burgerMenu = document.querySelector('.nav_menu');
 
-let burger = 'a'
+burger.addEventListener('click', (event) => {
+  console.log(event.target);
+  burger.classList.toggle('burger-turn');
+  burgerMenu.classList.toggle('nav_menu__burger');
+});

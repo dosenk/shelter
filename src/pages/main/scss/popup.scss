@@ -1,0 +1,114 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include blockSizes(100%, 100%);
+  background-color: rgba(41, 41, 41, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    cursor: pointer;
+  }
+  &__card {
+    @include blockSizes(900px, 500px);
+    position: relative;
+    background-color: #fafafa;
+    border-radius: 9px;
+    display: flex;
+    &_img {
+      @include blockSizes(500px, 500px);
+      @media screen and (max-width: 1100px) {
+        @include blockSizes(350px, 350px);
+      }
+      @media screen and (max-width: 700px) {
+        display: none;
+      }
+    }
+    &_content {
+      @include blockSizes(351px, 362px);
+      margin-left: 30px;
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      &-title {
+        @include fontStyle($ffl-G, normal, 400, 35px, 130%, 0.06em, #000000);
+        margin: 0;
+      }
+      &-SubTitle {
+        @include fontStyle($ffl-G, normal, 400, 20px, 115%, 0.06em, #000000);
+        margin: -31px 0 0 0;
+        @media screen and (max-width: 1100px) {
+          margin: 0;
+        }
+      }
+      &-text {
+        @include fontStyle($ffl-G, normal, 400, 15px, 110%, 0.06em, #000000);
+        margin: 0;
+        @media screen and (max-width: 1100px) {
+          font-size: 13px;
+        }
+        @media screen and (max-width: 1100px) {
+          @include blockSizes(220px);
+        }
+      }
+      &-list {
+        margin: 0;
+        @include blockSizes(95%, 102px);
+        @include fontStyle($ffl-G, normal, 700, 15px, 110%, 0.06em, #000000);
+        padding-left: 15px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        span {
+          font-weight: 400;
+        }
+      }
+      @media screen and (max-width: 1100px) {
+        @include blockSizes(260px, 303px);
+        margin-left: 10px;
+        margin-top: 11px;
+      }
+      @media screen and (max-width: 700px) {
+        align-items: center;
+      }
+    }
+    &_closeButton {
+      position: absolute;
+      top: -52px;
+      left: 890px;
+      @include blockSizes(48px, 48px);
+      border: 2px solid #f1cdb3;
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.5s;
+      &-hover,
+      &:hover {
+        cursor: pointer;
+        transform: rotate(180deg);
+      }
+      &:hover {
+        border-color: #fafafa;
+      }
+      @media screen and (max-width: 1100px) {
+        left: 622px;
+      }
+      @media screen and (max-width: 1100px) {
+        left: 233px;
+      }
+    }
+    &:hover {
+      cursor: auto;
+    }
+    @media screen and (max-width: 1100px) {
+      @include blockSizes(630px, 350px);
+    }
+    @media screen and (max-width: 700px) {
+      @include blockSizes(240px, 341px);
+    }
+  }
+}
