@@ -14,7 +14,7 @@ module.exports = {
     ecmaVersion: 12,
   },
   rules: {
-    'no-console': 'off',
+    'no-console': 'warn',
     'no-unused-vars': 'off',
     // indent: 'off',
   },
