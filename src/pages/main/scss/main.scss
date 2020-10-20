@@ -140,7 +140,7 @@ main {
       }
       .content_heading {
         @include fontStyle($ffl-G, normal, 400, 44px, 130%, normal, #ffffff);
-        @media screen and (max-width: 707px) {
+        @media screen and (max-width: 767px) {
           @include fontStyle($ffl-G, normal, 400, 25px, 130%, 0.06em, #ffffff);
           text-align: center;
         }
@@ -148,7 +148,7 @@ main {
       .content_subheading {
         margin-bottom: 1px;
         @include fontStyle($ffl-A, normal, 400, 15px, 160%, normal);
-        @media screen and (max-width: 707px) {
+        @media screen and (max-width: 767px) {
           text-align: center;
         }
       }
@@ -165,7 +165,7 @@ main {
           margin: 0 auto;
         }
       }
-      @media screen and (max-width: 707px) {
+      @media screen and (max-width: 767px) {
         align-items: center;
         width: 300px/460px * 100%;
         min-width: 300px;
@@ -177,7 +177,7 @@ main {
       width: 92.19%;
       justify-content: center;
     }
-    @media screen and (max-width: 707px) {
+    @media screen and (max-width: 767px) {
       padding-top: 180px;
       width: 300px;
       height: 673px;
@@ -193,14 +193,14 @@ main {
       height: 593px;
       margin-left: 139px;
     }
-    @media screen and (max-width: 707px) {
+    @media screen and (max-width: 767px) {
       margin-top: 105px;
       width: 260px;
       height: 271.77px;
       margin-left: 40px;
     }
   }
-  @media screen and (max-width: 707px) {
+  @media screen and (max-width: 767px) {
     height: 853px;
   }
 }

@@ -1,6 +1,6 @@
 .our-friends {
   h3,
-  h6 {
+  p {
     margin: 0;
   }
   @include blockSizes(inherit, 1342px);
@@ -22,21 +22,21 @@
       @media screen and (max-width: 1090px) {
         margin-top: 20px;
       }
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 767px) {
         @include fontStyle($ffl-G, normal, 400, 25px, 130%, 0.06em, #545454);
       }
     }
-    .our-friend__wrapper_items {
+    .pets_cards {
       @include blockSizes(100%, 930px);
       overflow: hidden;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      .our-friend__wrapper_items-item {
+      &__item {
         @include blockSizes(270px, 435px);
         background-color: #fafafa;
         margin-top: 15px;
-        .our-friend__wrapper_items-item_title {
+        .pets_card__text {
           @include fontStyle(
             $ffl-G,
             normal,
@@ -50,7 +50,7 @@
           margin-top: 26px;
           margin-left: 3px;
         }
-        .our-friend__wrapper_items-item_btn {
+        .pets_card__btn {
           @include blockSizes(187px, 52px);
           border: 2px solid #f1cdb3;
           border-radius: 100px;
@@ -62,6 +62,9 @@
             cursor: pointer;
             background-color: #fddcc4;
             border: none;
+          }
+          &:focus {
+            outline: none;
           }
         }
         &:hover {
@@ -76,7 +79,7 @@
         @include blockSizes(580px, 1422px);
         margin-top: -13px;
       }
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 767px) {
         @include blockSizes(270px, 1425px);
         margin-top: -26px;
       }
@@ -96,12 +99,11 @@
           text-align: center;
           border: 2px solid #f1cdb3;
           border-radius: 50%;
-          background-color: #f6f6f6;
-          &:hover {
-            cursor: pointer;
+          &:nth-child(3) {
             background-color: #f1cdb3;
           }
         }
+
         .our-friend__wrapper_controls-items-item_disabled {
           border: 2px solid #cdcdcd;
           color: #cdcdcd;
@@ -112,11 +114,16 @@
           }
         }
         .our-friend__wrapper_controls-items-item_active {
-          background: #f1cdb3;
-          border: none;
+          background: #f6f6f6;
+          border: 2px solid #f1cdb3;
+          &:hover {
+            border: none;
+            cursor: pointer;
+            background-color: #fddcc4;
+          }
         }
       }
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 767px) {
         width: 300px;
       }
     }
@@ -124,7 +131,7 @@
       height: 1597px;
       margin-top: 60px;
     }
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 767px) {
       @include blockSizes(300px, 1585px);
       margin-top: 22px;
     }
@@ -132,7 +139,7 @@
   @media screen and (max-width: 1090px) {
     height: 1733px;
   }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 767px) {
     height: 1649px;
   }
 }

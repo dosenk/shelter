@@ -58,7 +58,7 @@ header {
       justify-content: space-between;
       align-items: center;
     }
-    @media screen and (max-width: 707px) {
+    @media screen and (max-width: 767px) {
       display: none;
     }
   }
@@ -73,7 +73,7 @@ header {
       @include blockSizes(100%, 2px);
       background-color: #000000;
     }
-    @media screen and (max-width: 707px) {
+    @media screen and (max-width: 767px) {
       display: flex;
       margin-right: 2px;
       margin-bottom: 2px;
@@ -82,7 +82,7 @@ header {
   @media screen and (max-width: 855px) {
     width: 708px;
   }
-  @media screen and (max-width: 707px) {
+  @media screen and (max-width: 767px) {
     margin: 0;
     @include blockSizes(260px, 120px);
     height: 120px;

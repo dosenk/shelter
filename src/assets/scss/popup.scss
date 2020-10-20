@@ -18,10 +18,11 @@
     display: flex;
     &_img {
       @include blockSizes(500px, 500px);
-      @media screen and (max-width: 1100px) {
+      border-bottom-left-radius: 9px;
+      @media screen and (max-width: 1279px) {
         @include blockSizes(350px, 350px);
       }
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 767px) {
         display: none;
       }
     }
@@ -40,38 +41,53 @@
       &-SubTitle {
         @include fontStyle($ffl-G, normal, 400, 20px, 115%, 0.06em, #000000);
         margin: -31px 0 0 0;
-        @media screen and (max-width: 1100px) {
-          margin: 0;
+        @media screen and (max-width: 1279px) {
+          margin: -16px 0 0 0;
+          white-space: nowrap;
         }
       }
       &-text {
         @include fontStyle($ffl-G, normal, 400, 15px, 110%, 0.06em, #000000);
         margin: 0;
-        @media screen and (max-width: 1100px) {
+        @media screen and (max-width: 1279px) {
           font-size: 13px;
+          @include blockSizes(261px);
         }
-        @media screen and (max-width: 1100px) {
+        @media screen and (max-width: 767px) {
           @include blockSizes(220px);
         }
       }
       &-list {
         margin: 0;
         @include blockSizes(95%, 102px);
+        color: #f1cdb3;
         @include fontStyle($ffl-G, normal, 700, 15px, 110%, 0.06em, #000000);
-        padding-left: 15px;
+        padding-left: 0;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
+        list-style-type: none;
+        li {
+          &::before {
+            color: #f1cdb3;
+            content: "•";
+            padding-right: 10px;
+          }
+        }
         span {
           font-weight: 400;
         }
+        @media screen and (max-width: 1279px) {
+          @include blockSizes(inherit, 87px);
+        }
       }
-      @media screen and (max-width: 1100px) {
+      @media screen and (max-width: 1279px) {
         @include blockSizes(260px, 303px);
         margin-left: 10px;
         margin-top: 11px;
       }
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 767px) {
+        @include blockSizes(220px, 321px);
         align-items: center;
       }
     }
@@ -94,20 +110,20 @@
       &:hover {
         border-color: #fafafa;
       }
-      @media screen and (max-width: 1100px) {
+      @media screen and (max-width: 1279px) {
         left: 622px;
       }
-      @media screen and (max-width: 1100px) {
-        left: 233px;
+      @media screen and (max-width: 767px) {
+        left: 219px;
       }
     }
     &:hover {
       cursor: auto;
     }
-    @media screen and (max-width: 1100px) {
+    @media screen and (max-width: 1279px) {
       @include blockSizes(630px, 350px);
     }
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 767px) {
       @include blockSizes(240px, 341px);
     }
   }

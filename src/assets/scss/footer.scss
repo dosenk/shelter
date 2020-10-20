@@ -69,7 +69,7 @@ footer {
     .footer_contact {
       @include blockSizes(278px, 234px);
       @media screen and (max-width: 750px) {
-        @include blockSizes(278px, 208px);
+        @include blockSizes(300px, 208px);
         align-items: center;
       }
     }
@@ -100,6 +100,7 @@ footer {
       }
       @media screen and (max-width: 750px) {
         @include blockSizes(260px, 269px);
+        margin-left: 20px;
       }
     }
     @media screen and (max-width: 980px) {
@@ -108,14 +109,17 @@ footer {
       flex-wrap: wrap;
       align-content: space-between;
     }
-    @media screen and (max-width: 750px) {
+    @media screen and (max-width: 767px) {
       height: 780px;
+      flex-direction: column;
+      align-content: center;
+      justify-content: space-between;
     }
   }
   @media screen and (max-width: 980px) {
     height: 639px;
   }
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 767px) {
     height: 809px;
   }
 }

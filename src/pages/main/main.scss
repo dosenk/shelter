@@ -1,4 +1,7 @@
 @import "~normalize.css";
-@import "./scss/general.scss", "./scss/main.scss", "./scss/about.scss",
-  "./scss/pets.scss", "./scss/help.scss", "./scss/donation.scss",
-  "./scss/footer.scss", "./scss/popup.scss";
+
+@import "../../assets/scss/general.scss", "../../assets/scss/popup.scss",
+  "../../assets/scss/footer.scss";
+
+@import "./scss/main.scss", "./scss/about.scss", "./scss/pets.scss",
+  "./scss/help.scss", "./scss/donation.scss";

@@ -1,6 +1,6 @@
 @import "~normalize.css";
-@import "../main/scss/general.scss",
-        "../main/scss/footer.scss";
 
-@import "./scss/header.scss",
-        "./scss/pets.scss";
+@import "../../assets/scss/general.scss", "../../assets/scss/popup.scss",
+  "../../assets/scss/footer.scss";
+
+@import "./scss/header.scss", "./scss/main.scss";

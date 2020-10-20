@@ -1,6 +1,7 @@
 import pets from '../info/pets.json';
 import closeButton from '../images/close-button.png';
 
+const petsCards = document.querySelector('.pets_cards');
 const createElem = (tagName, innerText = null, ...classes) => {
   const element = document.createElement(tagName);
   classes.forEach((className) => {
@@ -9,6 +10,17 @@ const createElem = (tagName, innerText = null, ...classes) => {
   });
   return element;
 };
+
+// must be func? render-cards?
+pets.forEach((petsCard) => {
+  const card = createElem('div', null, 'pets_cards__item');
+  const img = createElem('img', null, 'pets_card__img');
+  img.setAttribute('src', petsCard.img);
+  const text = createElem('p', petsCard.name, 'pets_card__text');
+  const button = createElem('button', 'Learn more', 'pets_card__btn');
+  card.append(img, text, button);
+  petsCards.append(card);
+});
 
 const displayCard = (card) => {
   const popup = createElem('div', null, 'popup');
@@ -39,8 +51,6 @@ const displayCard = (card) => {
   popup.append(popupCard);
   document.querySelector('body').append(popup);
 };
-
-const petsCards = document.querySelector('.pets_cards');
 
 petsCards.addEventListener('click', (event) => {
   if (event.target.closest('.pets_cards__item')) {

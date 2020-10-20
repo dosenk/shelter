@@ -17,7 +17,7 @@
         order: 2;
         margin-right: 0;
       }
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 767px) {
         width: 260px;
         height: 135.2px;
       }
@@ -36,7 +36,7 @@
         @media screen and (max-width: 980px) {
           margin-top: 1px;
         }
-        @media screen and (max-width: 700px) {
+        @media screen and (max-width: 767px) {
           @include fontStyle($ffl-G, normal, 400, 25px, 130%, 0.06em, #545454);
           text-align: center;
           margin: 0;
@@ -44,7 +44,7 @@
       }
       .donation_info__text {
         @include fontStyle($ffl-G, normal, 400, 15px, 110%, 0.06em, #545454);
-        @media screen and (max-width: 700px) {
+        @media screen and (max-width: 767px) {
           @include fontStyle($ffl-G, normal, 400, 15px, 160%, normal, #545454);
           text-align: center;
         }
@@ -60,7 +60,7 @@
           @include fontStyle($ffl-G, normal, 400, 20px, 115%, 0.06em, #545454);
           text-decoration: none;
           margin-left: 15px;
-          @media screen and (max-width: 700px) {
+          @media screen and (max-width: 767px) {
             @include fontStyle(
               $ffl-G,
               normal,
@@ -76,19 +76,19 @@
           cursor: pointer;
           background-color: #fddcc4;
         }
-        @media screen and (max-width: 700px) {
+        @media screen and (max-width: 767px) {
           width: 281px;
           height: 43px;
         }
       }
       .donation_info__subtext {
         @include fontStyle($ffl-A, italic, 400, 12px, 150%, normal, #b2b2b2);
-        @media screen and (max-width: 700px) {
+        @media screen and (max-width: 767px) {
           width: 280px;
           text-align: justify;
         }
       }
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 767px) {
         width: 300px;
         height: 281px;
         align-items: center;
@@ -100,7 +100,7 @@
       height: 603px;
       justify-content: space-between;
     }
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 767px) {
       margin-top: 42px;
       height: 458px;
     }
@@ -108,7 +108,7 @@
   @media screen and (max-width: 980px) {
     height: 783px;
   }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 767px) {
     height: 542.2px;
   }
 }

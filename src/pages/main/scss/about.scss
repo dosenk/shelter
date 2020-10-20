@@ -15,7 +15,7 @@
         order: 2;
         margin-top: 80px;
       }
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 767px) {
         margin-top: 41px;
         width: 260px;
       }
@@ -28,7 +28,7 @@
       .about_heading {
         margin: 0;
         @include fontStyle($ffl-G, normal, 400, 35px, 130%, 0.06em, #545454);
-        @media screen and (max-width: 700px) {
+        @media screen and (max-width: 767px) {
           @include fontStyle($ffl-G, normal, 400, 25px, 130%, 0.06em, #545454);
           text-align: center;
           margin-left: 1px;
@@ -38,13 +38,13 @@
         margin: 0;
         @include fontStyle($ffl-A, normal, 400, 15px, 160%, normal, #4c4c4c);
         &:first-of-type {
-          @media screen and (max-width: 700px) {
+          @media screen and (max-width: 767px) {
             margin-top: 3px;
           }
         }
       }
 
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 767px) {
         height: 495px;
       }
     }
@@ -53,7 +53,7 @@
       flex-direction: row-reverse;
       margin-top: 80px;
     }
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 767px) {
       justify-content: center;
       margin-top: 42px;
       text-align: justify;
@@ -63,7 +63,7 @@
   @media screen and (max-width: 1120px) {
     height: 1048px;
   }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 767px) {
     height: 974px;
   }
 }
