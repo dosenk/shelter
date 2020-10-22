@@ -5,7 +5,11 @@ body {
 }
 .header {
   @include blockSizes(inherit, 120px);
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 1000;
   &__wrapper {
     @include blockSizes(1200px, 60px);
     top: 0;
@@ -34,7 +38,8 @@ body {
         @include fontStyle($ffl-G, normal, 400, 32px, 113%, 0.06em, #545454);
       }
       &_subtitle {
-        margin-left: 2px;
+        margin-left: 4px;
+        margin-top: 9px;
         @include fontStyle($ffl-A, normal, 400, 13px, 15px, 0.1em, #292929);
         @media screen and (max-width: 767px) {
           margin-top: 9px;
@@ -149,5 +154,11 @@ body {
         column-gap: 39px;
       }
     }
+  }
+  @media screen and (max-width: 1279px) {
+    // width: 768px;
+  }
+  @media screen and (max-width: 767px) {
+    // width: 320px;
   }
 }

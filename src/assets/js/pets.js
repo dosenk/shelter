@@ -1,6 +1,7 @@
 import pets from '../info/pets.json';
 import closeButton from '../images/close-button.png';
 
+const body = document.querySelector('body');
 const petsCards = document.querySelector('.pets_cards');
 const createElem = (tagName, innerText = null, ...classes) => {
   const element = document.createElement(tagName);
@@ -11,7 +12,9 @@ const createElem = (tagName, innerText = null, ...classes) => {
   return element;
 };
 
-// must be func? render-cards?
+// карточки каждый раз сортируются
+pets.sort(() => Math.random() - 0.5);
+
 pets.forEach((petsCard) => {
   const card = createElem('div', null, 'pets_cards__item');
   const img = createElem('img', null, 'pets_card__img');
@@ -54,6 +57,7 @@ const displayCard = (card) => {
 
 petsCards.addEventListener('click', (event) => {
   if (event.target.closest('.pets_cards__item')) {
+    body.style.overflow = 'hidden';
     const card = event.target.closest('.pets_cards__item');
     const cardName = card.children[1].innerText;
     pets.forEach((petsItem) => {
@@ -74,6 +78,7 @@ petsCards.addEventListener('click', (event) => {
 document.addEventListener('click', (event) => {
   if (event.target.classList.contains('popup')
     || event.target.closest('.popup__card_closeButton')) {
+    body.style = '';
     document.querySelector('.popup').remove();
   }
 });

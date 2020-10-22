@@ -37,12 +37,17 @@
     transform: rotate(90deg);
   }
 }
-
+.opacity {
+  background: rgba(41, 41, 41, 0);
+  transition: background 0.6s ease-in;
+}
 .bodyOpacity {
   position: fixed;
   top: 0;
+  $a: 320px;
   @include blockSizes(100%, 100%);
-  background: rgba(41, 41, 41, 0.6);
+  // z-index: 1001;
+  background: rgba(41, 41, 41, 0.5);
   &:hover {
     cursor: pointer;
   }
