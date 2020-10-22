@@ -8,23 +8,27 @@
 </head>
 
 <body>
-    <header class="qwe">
-        <div class="logo">
-            <h1 class="logo_title">Cozy House</h1>
-            <p class="logo_subtitle">Shelter for pets in Boston</p>
-        </div>
-        <div class="nav_menu">
-            <ul>
-                <li><a href="/index.html">About the shelter</a></li>
-                <li class="active"><a href="#">Our pets</a></li>
-                <li><a href="#">Help the shelter</a></li>
-                <li><a href="#">Contacts</a></li>
-            </ul>
-        </div>
-        <div class="burger">
-            <span></span>
-            <span></span>
-            <span></span>
+    <header class="header">
+        <div class="header__wrapper">
+            <div class="logo">
+                <a href="/index.html">
+                    <h1 class="logo_title">Cozy House</h1>
+                    <p class="logo_subtitle">Shelter for pets in Boston</p>
+                </a>
+            </div>
+            <div class="nav_menu">
+                <ul>
+                    <li><a href="/index.html">About the shelter</a></li>
+                    <li class="active"><a href="#">Our pets</a></li>
+                    <li><a href="#">Help the shelter</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </div>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
     <section class="our-friends">
@@ -33,15 +37,14 @@
             <div class="pets_cards"></div>
             <div class="our-friend__wrapper_controls">
                 <div class="our-friend__wrapper_controls-items">
-                    <button disabled
-                        class="our-friend__wrapper_controls-items-item our-friend__wrapper_controls-items-item_disabled btn">&lt;&lt;</button>
-                    <button disabled
-                        class="our-friend__wrapper_controls-items-item our-friend__wrapper_controls-items-item_disabled btn">&lt;</button>
+                    <button disabled class="our-friend__wrapper_controls-items-item btn-max-left"
+                        disabled>&lt;&lt;</button>
+                    <button disabled class="our-friend__wrapper_controls-items-item  btn-left" disabled>&lt;</button>
                     <button class="our-friend__wrapper_controls-items-item  btn">1</button>
                     <button
-                        class="our-friend__wrapper_controls-items-item our-friend__wrapper_controls-items-item_active btn">&gt;</button>
+                        class="our-friend__wrapper_controls-items-item our-friend__wrapper_controls-items-item_active btn-rigth">&gt;</button>
                     <button
-                        class="our-friend__wrapper_controls-items-item our-friend__wrapper_controls-items-item_active btn">&gt;&gt;</button>
+                        class="our-friend__wrapper_controls-items-item our-friend__wrapper_controls-items-item_active btn-max-rigth">&gt;&gt;</button>
                 </div>
             </div>
         </div>

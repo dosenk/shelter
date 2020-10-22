@@ -43,7 +43,7 @@
         margin: -31px 0 0 0;
         @media screen and (max-width: 1279px) {
           margin: -16px 0 0 0;
-          white-space: nowrap;
+          // white-space: nowrap;
         }
       }
       &-text {
@@ -106,10 +106,13 @@
       &:hover {
         cursor: pointer;
         transform: rotate(180deg);
+        border: 2px solid #fddcc4;
+        background-color: #fddcc4;
       }
-      &:hover {
-        border-color: #fafafa;
-      }
+      // &:hover {
+      //   border: 2px solid #fddcc4;
+      //   background-color: #fddcc4;
+      // }
       @media screen and (max-width: 1279px) {
         left: 622px;
       }

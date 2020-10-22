@@ -1,0 +1,49 @@
+.header__wrapper {
+  .nav_menu {
+    @media screen and (max-width: 767px) {
+      @include blockSizes(320px, 100%);
+      position: fixed;
+      top: 0;
+      right: -320px;
+      background-color: #292929;
+      transition: right 0.7s;
+      &__burger {
+        position: fixed;
+        right: 0;
+      }
+    }
+  }
+  .burger {
+    @include blockSizes(30px, 22px);
+    z-index: 1001;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 2px;
+    transition: transform 0.4s;
+    span {
+      display: block;
+      @include blockSizes(100%, 2px);
+      background-color: #f1cdb3;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    @media screen and (max-width: 767px) {
+      display: flex;
+    }
+  }
+  .burger-turn {
+    transform: rotate(90deg);
+  }
+}
+
+.bodyOpacity {
+  position: fixed;
+  top: 0;
+  @include blockSizes(100%, 100%);
+  background: rgba(41, 41, 41, 0.6);
+  &:hover {
+    cursor: pointer;
+  }
+}

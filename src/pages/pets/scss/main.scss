@@ -19,10 +19,11 @@
       @include fontStyle($ffl-G, normal, 400, 35px, 130%, 0.06em, #545454);
       text-align: center;
       margin-left: 3px;
-      @media screen and (max-width: 1090px) {
+      @media screen and (max-width: 1279px) {
         margin-top: 20px;
       }
       @media screen and (max-width: 767px) {
+        @include blockSizes(320px, 90px);
         @include fontStyle($ffl-G, normal, 400, 25px, 130%, 0.06em, #545454);
       }
     }
@@ -32,6 +33,8 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      transition: opacity 0.4s;
+      opacity: 1;
       &__item {
         @include blockSizes(270px, 435px);
         background-color: #fafafa;
@@ -71,11 +74,11 @@
           cursor: pointer;
           background-color: #ffffff;
         }
-        @media screen and (max-width: 1090px) {
+        @media screen and (max-width: 1279px) {
           margin-top: 30px;
         }
       }
-      @media screen and (max-width: 1090px) {
+      @media screen and (max-width: 1279px) {
         @include blockSizes(580px, 1422px);
         margin-top: -13px;
       }
@@ -97,14 +100,6 @@
           padding-bottom: 2px;
           padding-left: 7px;
           text-align: center;
-          border: 2px solid #f1cdb3;
-          border-radius: 50%;
-          &:nth-child(3) {
-            background-color: #f1cdb3;
-          }
-        }
-
-        .our-friend__wrapper_controls-items-item_disabled {
           border: 2px solid #cdcdcd;
           color: #cdcdcd;
           cursor: auto;
@@ -112,10 +107,21 @@
             cursor: auto;
             background-color: #f6f6f6;
           }
+          border-radius: 50%;
+          &:nth-child(3) {
+            background-color: #f1cdb3;
+            border: none;
+            color: #292929;
+          }
+          &:focus {
+            outline: none;
+          }
         }
+
         .our-friend__wrapper_controls-items-item_active {
           background: #f6f6f6;
           border: 2px solid #f1cdb3;
+          color: #292929;
           &:hover {
             border: none;
             cursor: pointer;
@@ -127,7 +133,7 @@
         width: 300px;
       }
     }
-    @media screen and (max-width: 1090px) {
+    @media screen and (max-width: 1279px) {
       height: 1597px;
       margin-top: 60px;
     }
@@ -136,7 +142,7 @@
       margin-top: 22px;
     }
   }
-  @media screen and (max-width: 1090px) {
+  @media screen and (max-width: 1279px) {
     height: 1733px;
   }
   @media screen and (max-width: 767px) {

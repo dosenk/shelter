@@ -14,9 +14,9 @@ module.exports = {
     ecmaVersion: 12,
   },
   rules: {
-    'no-console': 'off',
-    'no-unused-vars': 'off',
-    'linebreak-style': ['error', 'windows'],
+    // 'no-console': 'error',
+    // 'no-unused-vars': 'off',
+    // 'linebreak-style': ['error', 'windows'],
     // indent: 'off',
   },
 };

@@ -18,10 +18,10 @@ footer {
     }
     h3 {
       @include fontStyle($ffl-G, normal, 400, 35px, 130%, 0.06em, #ffffff);
-      @media screen and (max-width: 980px) {
+      @media screen and (max-width: 1279px) {
         margin-top: 1px;
       }
-      @media screen and (max-width: 750px) {
+      @media screen and (max-width: 767px) {
         @include fontStyle($ffl-G, normal, 400, 25px, 130%, 0.06em, #ffffff);
         width: 290px;
         white-space: normal;
@@ -54,21 +54,21 @@ footer {
         a {
           padding-top: 1px;
         }
-        @media screen and (max-width: 980px) {
+        @media screen and (max-width: 1279px) {
           margin-bottom: 2px;
         }
       }
-      @media screen and (max-width: 980px) {
+      @media screen and (max-width: 1279px) {
         margin: 0 30px;
       }
-      @media screen and (max-width: 750px) {
+      @media screen and (max-width: 767px) {
         margin: 0;
       }
     }
 
     .footer_contact {
       @include blockSizes(278px, 234px);
-      @media screen and (max-width: 750px) {
+      @media screen and (max-width: 767px) {
         @include blockSizes(300px, 208px);
         align-items: center;
       }
@@ -82,28 +82,28 @@ footer {
       h3 {
         margin-left: 1px;
         margin-top: 1px;
-        @media screen and (max-width: 980px) {
+        @media screen and (max-width: 1279px) {
           margin-left: 1px;
         }
-        @media screen and (max-width: 750px) {
+        @media screen and (max-width: 767px) {
           margin-left: 5px;
           margin-top: 0;
         }
       }
-      @media screen and (max-width: 750px) {
+      @media screen and (max-width: 767px) {
         @include blockSizes(300px, 222px);
       }
     }
     & > img {
-      @media screen and (max-width: 980px) {
+      @media screen and (max-width: 1279px) {
         @include blockSizes(300px, 310px);
       }
-      @media screen and (max-width: 750px) {
+      @media screen and (max-width: 767px) {
         @include blockSizes(260px, 269px);
         margin-left: 20px;
       }
     }
-    @media screen and (max-width: 980px) {
+    @media screen and (max-width: 1279px) {
       height: 609px;
       justify-content: center;
       flex-wrap: wrap;
@@ -116,7 +116,7 @@ footer {
       justify-content: space-between;
     }
   }
-  @media screen and (max-width: 980px) {
+  @media screen and (max-width: 1279px) {
     height: 639px;
   }
   @media screen and (max-width: 767px) {
