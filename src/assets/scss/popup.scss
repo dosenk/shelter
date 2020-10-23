@@ -7,6 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1200;
   &:hover {
     cursor: pointer;
   }
@@ -43,6 +44,7 @@
         margin: -31px 0 0 0;
         @media screen and (max-width: 1279px) {
           margin: -16px 0 0 0;
+          text-align: center;
           // white-space: nowrap;
         }
       }
@@ -55,6 +57,7 @@
         }
         @media screen and (max-width: 767px) {
           @include blockSizes(220px);
+          text-align: justify;
         }
       }
       &-list {
@@ -78,7 +81,7 @@
           font-weight: 400;
         }
         @media screen and (max-width: 1279px) {
-          @include blockSizes(inherit, 87px);
+          @include blockSizes(inherit, 98px);
         }
       }
       @media screen and (max-width: 1279px) {
